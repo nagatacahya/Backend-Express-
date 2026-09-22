@@ -17,7 +17,6 @@ export const getTodoById = async (req: Request, res: Response): Promise<void> =>
   try {
     const todo = await TodoModel.getById(Number(id), userId);
 
-    // Jika undefined, berarti todo tidak ditemukan atau bukan milik user ini
     if (!todo) {
       res.status(404).json({ success: false, message: 'Tugas tidak ditemukan!' });
       return;
