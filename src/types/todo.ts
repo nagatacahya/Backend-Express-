@@ -18,3 +18,4 @@ export interface TodoRow {
   task: string;
   is_completed: number | boolean;
 }
+
